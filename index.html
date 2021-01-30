@@ -63,9 +63,9 @@
                     <input id="first-class-input" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="row">
-                    <button onclick="firstClassTicket(false)" class="btn btn-default">-<i
+                    <button onclick="onlineTicket('first-class',false)" class="btn btn-default">-<i
                             class="fas fa-minus"></i></button>
-                    <button onclick="firstClassTicket(true)" class="btn btn-default">+<i
+                    <button onclick="onlineTicket('first-class',true)" class="btn btn-default">+<i
                             class="fas fa-plus"></i></button>
                 </div>
             </div>
@@ -76,9 +76,10 @@
                     <input id="economy-input" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="row">
-                    <button onclick="economyTicket(false)" class="btn btn-default">-<i
+                    <button onclick="onlineTicket('economy',false)" class="btn btn-default">-<i
                             class="fas fa-minus"></i></button>
-                    <button onclick="economyTicket(true)" class="btn btn-default">+<i class="fas fa-plus"></i></button>
+                    <button onclick="onlineTicket('economy',true)" class="btn btn-default">+<i
+                            class="fas fa-plus"></i></button>
                 </div>
             </div>
             <div class="calculations">
@@ -87,7 +88,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$ <span id="sub-total">000</span></p>
+                        <p>$ <span id="sub-total">0</span></p>
                     </div>
                 </div>
 
