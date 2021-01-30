@@ -59,23 +59,26 @@
             </div>
             <div class="input-group f-class">
                 <div>
-                    <label for="">First Class ($ <span id="first-class-perPrice">150</span>)</label>
-                    <input id="first-class-input" class="inp-style inp-width" type="number" name="" value="1">
+                    <label for="">First Class ($ <span id="first-class-perPrice">0</span>)</label>
+                    <input id="first-class-input" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="row">
-                    <button id="first-minus-btn" class="btn btn-default">-<i class="fas fa-minus"></i></button>
-                    <button id="first-plus-btn" class="btn btn-default">+<i class="fas fa-plus"></i></button>
+                    <button onclick="firstClassTicket(false)" class="btn btn-default">-<i
+                            class="fas fa-minus"></i></button>
+                    <button onclick="firstClassTicket(true)" class="btn btn-default">+<i
+                            class="fas fa-plus"></i></button>
                 </div>
             </div>
 
             <div class="input-group f-class">
                 <div>
-                    <label for="">Economy ($ <span id="economy-perPrice">100</span>)</label>
-                    <input id="economy-input" class="inp-style inp-width" type="number" name="" value="1">
+                    <label for="">Economy ($ <span id="economy-perPrice">0</span>)</label>
+                    <input id="economy-input" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="row">
-                    <button id="economy-minus-btn" class="btn btn-default">-<i class="fas fa-minus"></i></button>
-                    <button id="economy-plus-btn" class="btn btn-default">+<i class="fas fa-plus"></i></button>
+                    <button onclick="economyTicket(false)" class="btn btn-default">-<i
+                            class="fas fa-minus"></i></button>
+                    <button onclick="economyTicket(true)" class="btn btn-default">+<i class="fas fa-plus"></i></button>
                 </div>
             </div>
             <div class="calculations">
@@ -84,7 +87,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p>$ <span id="sub-total">000</span></p>
                     </div>
                 </div>
 
@@ -112,8 +115,8 @@
     </main>
     <!--Thank You-->
 
-    <script>
-        // first class minus button event hander
+    <!-- <script>
+        // first class minus button event handler
         document.getElementById("first-minus-btn").addEventListener("click", function () {
             const firstClassInput = document.getElementById("first-class-input");
             const firstClassInputNum = parseInt(firstClassInput.value);
@@ -124,7 +127,7 @@
             const firstClassPerPriceNum = parseFloat(firstClassPerPrice.innerText);
             firstClassPerPrice.innerText = Math.abs(150 * -1 * firstClassInput.value);
         })
-        // first class plus button event hander
+        // first class plus button event handler
         document.getElementById("first-plus-btn").addEventListener("click", function () {
             const firstClassInput = document.getElementById("first-class-input");
             const firstClassInputNum = parseInt(firstClassInput.value);
@@ -135,7 +138,7 @@
             const firstClassPerPriceNum = parseFloat(firstClassPerPrice.innerText);
             firstClassPerPrice.innerText = 150 * firstClassInput.value;
         })
-        // economy minus button event hander
+        // economy minus button event handler
         document.getElementById("economy-minus-btn").addEventListener("click", function () {
             const economyInput = document.getElementById("economy-input");
             const economyInputNum = parseInt(economyInput.value);
@@ -146,7 +149,7 @@
             const economyPerPriceNum = parseFloat(economyPerPrice.innerText);
             economyPerPrice.innerText = Math.abs(100 * -1 * economyInput.value);
         })
-        // economy plus button event hander
+        // economy plus button event handler
         document.getElementById("economy-plus-btn").addEventListener("click", function () {
             const economyInput = document.getElementById("economy-input");
             const economyInputNum = parseInt(economyInput.value);
@@ -157,7 +160,8 @@
             const economyPerPriceNum = parseFloat(economyPerPrice.innerText);
             economyPerPrice.innerText = 100 * economyInput.value;
         })
-    </script>
+    </script>-->
+    <script src="index.js"></script>
 </body>
 
 </html>
